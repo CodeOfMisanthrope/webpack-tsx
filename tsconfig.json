@@ -1,17 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
+    "target": "ES2022",
     "lib": [
-      "dom",
-      "esnext"
+      "ESNext"
     ],
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -19,28 +18,10 @@
     "declaration": true,
     "declarationDir": "dist",
     "rootDir": ".",
-    "baseUrl": "./",
-    "paths": {
-      "~core/*": [
-        "src/lib/*"
-      ],
-      "~assets/*": [
-        "assets/*"
-      ]
-    },
-    "plugins": [
-      {
-        "transform": "typescript-transform-paths"
-      },
-      {
-        "transform": "typescript-transform-paths",
-        "afterDeclarations": true
-      }
-    ]
+    "baseUrl": "./"
   },
   "include": [
-    "src/**/*.ts",
-    "index.d.ts"
+    "webpack.config.ts"
   ],
   "exclude": [
     "node_modules"
